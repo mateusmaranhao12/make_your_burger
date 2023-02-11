@@ -1,5 +1,6 @@
 <template>
     <div>
+      <Message :msg="msg" v-show="msg" />
       <form id="burger-form" method="POST" @submit="createBurger">
         <div class="input-container">
           <label for="nome">Nome do cliente:</label>
@@ -34,75 +35,84 @@
   </template>
 
 <script>
-    export default {
-        name: 'BurgerForm',
 
-        data() {
-          return {
-            paes: null,
-            carnes: null,
-            opcionaisdata: null,
-            nome: null,
-            pao: null,
-            carne: null,
-            opcionais: [],
-            msg: null
-          }
-        },
+  import Message from './Message.vue'
 
-        methods: {
+  export default {
+    name: 'BurgerForm',
 
-          async getIngredientes() {
+    data() {
+      return {
+        paes: null,
+        carnes: null,
+        opcionaisdata: null,
+        nome: null,
+        pao: null,
+        carne: null,
+        opcionais: [],
+        msg: null
+      }
+    },
 
-            const req = await fetch ('http://localhost:3000/ingredientes')
-            const data = await req.json()
+    methods: {
 
-            this.paes = data.paes
-            this.carnes = data.carnes
-            this.opcionaisdata = data.opcionais
+      async getIngredientes() {
 
-          },
+        const req = await fetch ('http://localhost:3000/ingredientes')
+        const data = await req.json()
 
-          async createBurger(e) {
+        this.paes = data.paes
+        this.carnes = data.carnes
+        this.opcionaisdata = data.opcionais
 
-            e.preventDefault()
+      },
 
-            const data = {
-              nome: this.nome,
-              carne: this.carne,
-              pao: this.pao,
-              opcionais: Array.from(this.opcionais),
-              status: 'Solicitado'
-            }
+      async createBurger(e) {
 
-            const dataJson = JSON.stringify(data)
+        e.preventDefault()
 
-            const req = await fetch ('http://localhost:3000/burgers', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: dataJson
-            })
-
-            const res = await req.json()
-
-            //colocar mensagem de sistema
-
-            //limpar mensagem
-
-            //limpar os campos
-            this.nome = ''
-            this.carne = ''
-            this.pao = ''
-            this.opcionais = ''
-
-          }
-
-        },
-
-        mounted() {
-          this.getIngredientes()
+        const data = {
+          nome: this.nome,
+          carne: this.carne,
+          pao: this.pao,
+          opcionais: Array.from(this.opcionais),
+          status: 'Solicitado'
         }
+
+        const dataJson = JSON.stringify(data)
+
+        const req = await fetch ('http://localhost:3000/burgers', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: dataJson
+        })
+
+        const res = await req.json()
+
+        //colocar mensagem de sistema
+        this.msg = `Pedido Nº${res.id} realizado com sucesso!`
+
+        //limpar mensagem
+        setTimeout(() => this.msg = '', 4000)
+
+        //limpar os campos
+        this.nome = ''
+        this.carne = ''
+        this.pao = ''
+        this.opcionais = ''
+
+      }
+
+    },
+
+    mounted() {
+      this.getIngredientes()
+    },
+
+    components: {
+      Message
     }
+  }
 </script>
 
 <style lang="scss">
