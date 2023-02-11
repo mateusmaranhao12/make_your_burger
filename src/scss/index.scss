@@ -27,7 +27,7 @@
 
 #nav {
     background-color: $cinza;
-    border-bottom: 4px solid $border;
+    border-bottom: 4px $solid $border;
     padding: 15px 50px;
     display: $flex;
     justify-content: flex-end;
@@ -57,21 +57,6 @@
     height: 40px;
   }
 
-
-//Footer
-
-#footer {
-    height: 200px;
-    background-color: $cinza;
-    border-top: 4px solid $border;
-    color: $dourado;
-    display: $flex;
-    align-items: $center;
-    justify-content: $center;
-    bottom: 0;
-    width: 100%;
-}
-
 //Banner
 
 #main-banner {
@@ -97,61 +82,61 @@
 #burger-form {
     max-width: 400px;
     margin: 0 $auto;
-}
 
-.input-container {
-    display: $flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-label {
-    font-weight: $bold;
-    margin-bottom: 15px;
-    color: $cinza;
-    padding: 5px 10px;
-    border-left: 4px solid $dourado;
-}
-input, select {
-    padding: 5px 10px;
-    width: 300px;
-}
-#opcionais-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-#opcionais-title {
-    width: 100%;
-}
-.checkbox-container {
-    display: $flex;
-    align-items: flex-start;
-    width: 50%;
-    margin-bottom: 20px;
-
-    input, span {
-        width: $auto;
+    .input-container {
+        display: $flex;
+        flex-direction: column;
+        margin-bottom: 20px;
     }
-
-    span {
-        margin-left: 6px;
+    
+    label {
         font-weight: $bold;
+        margin-bottom: 15px;
+        color: $cinza;
+        padding: 5px 10px;
+        border-left: 4px $solid $dourado;
     }
-}
-.submit-btn {
-    background-color: $cinza;
-    color:$dourado;
-    font-weight: $bold;
-    border: 2px solid $cinza;
-    padding: 10px;
-    font-size: 16px;
-    margin: 0 $auto;
-    cursor: pointer;
-    transition: .5s;
-}
-.submit-btn:hover {
-    background-color: transparent;
-    color: $cinza;
+    input, select {
+        padding: 5px 10px;
+        width: 300px;
+    }
+    #opcionais-container {
+        flex-direction: row;
+        flex-wrap: $wrap;
+    }
+    #opcionais-title {
+        width: 100%;
+    }
+    .checkbox-container {
+        display: $flex;
+        align-items: flex-start;
+        width: 50%;
+        margin-bottom: 20px;
+    
+        input, span {
+            width: $auto;
+        }
+    
+        span {
+            margin-left: 6px;
+            font-weight: $bold;
+        }
+    }
+    .submit-btn {
+        background-color: $cinza;
+        color:$dourado;
+        font-weight: $bold;
+        border: 2px $solid $cinza;
+        padding: 10px;
+        font-size: 16px;
+        margin: 0 $auto;
+        cursor: pointer;
+        transition: .5s;
+    }
+    .submit-btn:hover {
+        background-color: transparent;
+        color: $cinza;
+    }
 }
 
 //Message
@@ -159,9 +144,92 @@ input, select {
 .message-container {
     color: #004085;
     background-color: #cce5ff;
-    border: 2px solid #b8daff;
+    border: 2px $solid #b8daff;
     border-radius: 5px;
     padding: 10px;
     max-width: 400px;
-    margin: 30px auto;
+    margin: 30px $auto;
+}
+
+//Dashboard
+
+#burger-table {
+    max-width: 1200px;
+    margin: 0 $auto;
+
+    ul {
+        list-style: none;
+    }
+
+    #burger-table-heading,
+    #burger-table-rows,
+    .burger-table-row {
+        display: $flex;
+        flex-wrap: $wrap;
+    }
+
+    #burger-table-heading {
+        font-weight: $bold;
+        padding: 12px;
+        border-bottom: 3px $solid $cinza;
+
+        div {
+            width: 19%;
+        }
+
+        .order-id {
+            width: 5%;
+        }
+    }
+
+    .burger-table-row {
+        width: 100%;
+        padding: 12px;
+        border-bottom: 1px $solid #CCC;
+
+        .order-number {
+            width: 5%;
+        }
+
+        div {
+            width: 19%;
+        }
+
+        select {
+            padding: 12px 6px;
+            margin-right: 12px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.delete-btn {
+    background-color: $cinza;
+    color:$dourado;
+    font-weight: $bold;
+    border: 2px $solid $cinza;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 $auto;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.delete-btn:hover {
+    background-color: transparent;
+    color: $cinza;
+}
+
+//Footer
+
+#footer {
+    height: 200px;
+    background-color: $cinza;
+    border-top: 4px $solid $border;
+    color: $dourado;
+    display: $flex;
+    align-items: $center;
+    justify-content: $center;
+    bottom: 0;
+    width: 100%;
 }

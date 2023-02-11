@@ -136,6 +136,27 @@
       ],
       "status": "Solicitado",
       "id": 5
+    },
+    {
+      "nome": "Cristiano",
+      "carne": "Veggie burger",
+      "pao": "Integral",
+      "opcionais": [
+        "Mussarela"
+      ],
+      "status": "Solicitado",
+      "id": 6
+    },
+    {
+      "nome": "Caio",
+      "carne": "Veggie burger",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Ovo",
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 7
     }
   ]
 }
