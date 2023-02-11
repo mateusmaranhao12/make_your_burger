@@ -1,3 +1,7 @@
+//import das variáveis
+
+@import 'variaveis';
+
 //Geral do projeto
 
 * {
@@ -12,37 +16,39 @@
     min-height: 250px;
 
     h1 {
-        text-align: center;
+        text-align: $center;
         font-size: 42px;
         margin-bottom: 30px;
-        color: #222;
+        color: $cinza;
     }
 }
 
 //Navbar
 
 #nav {
-    background-color: #222;
-    border-bottom: 4px solid #111;
+    background-color: $cinza;
+    border-bottom: 4px solid $border;
     padding: 15px 50px;
-    display: flex;
+    display: $flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: $center;
 
     #logo-url {
-        margin: auto;
+        margin: $auto;
         margin-left: 0;
     }
 
     a {
-        color: #fcba03;
+        color: $dourado;
         text-decoration: none;
         margin: 12px;
         transition: .5s;
+        text-transform: $uppercase;
+        font-weight: $bold;
     }
 
     a:hover {
-        color: #FFF;
+        color: $branco;
     }
   }
 
@@ -56,12 +62,12 @@
 
 #footer {
     height: 200px;
-    background-color: #222;
-    border-top: 4px solid #111;
-    color: #fcba03;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: $cinza;
+    border-top: 4px solid $border;
+    color: $dourado;
+    display: $flex;
+    align-items: $center;
+    justify-content: $center;
     bottom: 0;
     width: 100%;
 }
@@ -73,15 +79,15 @@
     background-position: 0 -250px;
     background-size: cover;
     height: 500px;
-    display: flex;
-    align-items: center;
+    display: $flex;
+    align-items: $center;
     justify-content: flex-start;
 
     h1 {
-        color: #FFF;
-        text-align: center;
+        color: $branco;
+        text-align: $center;
         font-size: 60px;
-        background-color: #222;
+        background-color: $cinza;
         padding: 20px 40px;
     }
 }
@@ -90,21 +96,21 @@
 
 #burger-form {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 $auto;
 }
 
 .input-container {
-    display: flex;
+    display: $flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
 label {
-    font-weight: bold;
+    font-weight: $bold;
     margin-bottom: 15px;
-    color: #222;;
+    color: $cinza;
     padding: 5px 10px;
-    border-left: 4px solid #fcba03;
+    border-left: 4px solid $dourado;
 }
 input, select {
     padding: 5px 10px;
@@ -118,32 +124,32 @@ input, select {
     width: 100%;
 }
 .checkbox-container {
-    display: flex;
+    display: $flex;
     align-items: flex-start;
     width: 50%;
     margin-bottom: 20px;
 
     input, span {
-        width: auto;
+        width: $auto;
     }
 
     span {
         margin-left: 6px;
-        font-weight: bold;
+        font-weight: $bold;
     }
 }
 .submit-btn {
-    background-color: #222;
-    color:#fcba03;
-    font-weight: bold;
-    border: 2px solid #222;
+    background-color: $cinza;
+    color:$dourado;
+    font-weight: $bold;
+    border: 2px solid $cinza;
     padding: 10px;
     font-size: 16px;
-    margin: 0 auto;
+    margin: 0 $auto;
     cursor: pointer;
     transition: .5s;
 }
 .submit-btn:hover {
-background-color: transparent;
-color: #222;
+    background-color: transparent;
+    color: $cinza;
 }
