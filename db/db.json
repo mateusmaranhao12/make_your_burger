@@ -115,48 +115,6 @@
       ],
       "status": "Solicitado",
       "id": 3
-    },
-    {
-      "nome": "Mike",
-      "carne": "Picanha",
-      "pao": "Integral",
-      "opcionais": [
-        "Cheddar",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "nome": "João",
-      "carne": "Veggie burger",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Ovo"
-      ],
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
-      "nome": "Cristiano",
-      "carne": "Veggie burger",
-      "pao": "Integral",
-      "opcionais": [
-        "Mussarela"
-      ],
-      "status": "Solicitado",
-      "id": 6
-    },
-    {
-      "nome": "Caio",
-      "carne": "Veggie burger",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Ovo",
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 7
     }
   ]
 }
