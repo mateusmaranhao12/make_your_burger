@@ -90,7 +90,7 @@
         "Cebola roxa",
         "Cheddar"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 1
     },
     {
@@ -102,7 +102,7 @@
         "Ovo",
         "Tomate"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 2
     },
     {
@@ -113,8 +113,18 @@
         "Cheddar",
         "Tomate"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 3
+    },
+    {
+      "nome": "Julia",
+      "carne": "Cupim",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Mussarela"
+      ],
+      "status": "Em produção",
+      "id": 4
     }
   ]
 }
